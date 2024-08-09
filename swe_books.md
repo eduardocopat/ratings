@@ -14,7 +14,7 @@ has_children: false
 
 The books that impacted my career the most. Sorted by tier and alphabetically.
 
-{% assign sorted_books = site.swe_books | sort: "title" | reverse %}
+{% assign sorted_books = site.swe_books | sort: "title"  %}
 <h2>S-Tier — Quintessential for every software engineer </h2>
 {% for book in sorted_books %}
 {% if book.rating == "S-Tier" %}
