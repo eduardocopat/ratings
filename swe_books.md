@@ -12,26 +12,32 @@ has_children: false
 
 <h1>Software Engineering Books</h1>
 
-<h2>S-Tier — Quintessential for every software engineer </h2>
-<br>
-**Clean Code**  _(2012) - Robert C. Martin_ <br>
-Must-read for any developer. Follow it religiously, but question your dogmas.
+The books that impacted my career the most. Sorted by tier and alphabetically.
 
-**Pragmatic Programmer** _(1999) - David Thomas, Andrew Hunt_ <br>
-This books distills the wisdom of the reality of creating software as team.
+{% assign sorted_books = site.swe_books | sort: "title" | reverse %}
+<h2>S-Tier — Quintessential for every software engineer </h2>
+{% for book in sorted_books %}
+{% if book.rating == "S-Tier" %}
+- **{{ book.title }}** _({{ book.year }}) - {{ book.author }}_ <br>
+{{ book.short}}
+{% endif %}
+{% endfor %}
+
 
 <h2>A-Tier — Recommended books</h2>
-<br>
-**API Design Patterns** _(2021) - JJ Geewax_ <br>
-Excellent reference to design good APIs, with emphasis on creating for the consumer.
-
+{% for book in sorted_books %}
+{% if book.rating == "A-Tier" %}
+- **{{ book.title }}** _({{ book.year }}) - {{ book.author }}_ <br>
+{{ book.short}}
+{% endif %}
+{% endfor %}
 
 <h2>B-Tier — Interesting</h2>
-
+{% for book in sorted_books %}
+{% if book.rating == "B-Tier" %}
+- **{{ book.title }}** _({{ book.year }}) - {{ book.author }}_ <br>
+{{ book.short}}
+{% endif %}
+{% endfor %}
 
 <h2>C-Tier — Don't even</h2>
-
- <p hidden>
-**Book** _(XXXX) - Foo_ <br>
-Lorem Ipsum
-</p> 
