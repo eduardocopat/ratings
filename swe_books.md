@@ -24,7 +24,15 @@ The books that impacted my career the most. Sorted by tier and alphabetically.
 {% endfor %}
 
 
-<h2>A-Tier — Recommended books</h2>
+<h2>A+-Tier — Highly recommended books</h2>
+{% for book in sorted_books %}
+{% if book.rating == "A+-Tier" %}
+- **{{ book.title }}** _({{ book.year }}) - {{ book.author }}_ <br>
+{{ book.short}}
+{% endif %}
+{% endfor %}
+
+<h2>A-Tier — Good references</h2>
 {% for book in sorted_books %}
 {% if book.rating == "A-Tier" %}
 - **{{ book.title }}** _({{ book.year }}) - {{ book.author }}_ <br>
