@@ -12,7 +12,9 @@ has_children: false
 
 <h1>Software Engineering Books</h1>
 
-The books that impacted my career the most. Sorted by tier and alphabetically. Books are dated after their first release.
+The books that impacted my career the most. 
+
+Sorted by tier and alphabetically. Books are dated after their first release.
 
 {% assign sorted_books = site.swe_books | sort: "title"  %}
 <h2>S Tier — Quintessential for every software engineer </h2>
