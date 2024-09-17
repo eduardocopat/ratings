@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "jekyll", "~> 4.3.3" # installed by `gem jekyll`
+gem "jekyll", "~> 4.3.4" # installed by `gem jekyll`
 group :jekyll_plugins do
   gem "jekyll-watch"
 end
